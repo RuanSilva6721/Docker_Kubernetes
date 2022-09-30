@@ -1,0 +1,10 @@
+*Docker
+É um software que reduz a complexidade de setup de aplicações. Onde configuramos containers, que são como servidores para rodar nossas aplicações
+
+-Por que usar docker? proporciona mais velocidade na configuração do ambiente de um dev, pouco tempo gasto em manutenção, containers são executados como configurações,maior performance para executar aplicações, mais performático que uma VM, nós livra da Matrix from Hell
+-Vesões do Docker: 
+    1-CE(Community Edition): Edição gratuitta, que nos possibilita utilizar o docker normalmente, é a que vamos optar
+    2-EE(Enterprise Edtion): edição paga, há uma garantia maior das versões que são disponibilizadas e você tem suporte do time do Docker
+
+
+-docker run: para rodar os containers
