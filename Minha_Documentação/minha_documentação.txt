@@ -1,10 +1,42 @@
 *Docker
 É um software que reduz a complexidade de setup de aplicações. Onde configuramos containers, que são como servidores para rodar nossas aplicações
 
+-https://hub.docker.com : para encontrar imagem no repo do docker
 -Por que usar docker? proporciona mais velocidade na configuração do ambiente de um dev, pouco tempo gasto em manutenção, containers são executados como configurações,maior performance para executar aplicações, mais performático que uma VM, nós livra da Matrix from Hell
 -Vesões do Docker: 
     1-CE(Community Edition): Edição gratuitta, que nos possibilita utilizar o docker normalmente, é a que vamos optar
     2-EE(Enterprise Edtion): edição paga, há uma garantia maior das versões que são disponibilizadas e você tem suporte do time do Docker
 
-
+-Imagem e container são recursos fundamentais do Docker
 -docker run: para rodar os containers
+
+*containers 
+É Um pacote de codigo que pode executar uma ação, por exemplo: uma aplicação de Node.js, PHP, python etc.. 
+-containers utilizam imagens para poderem ser executados
+-Os containers de docker não tem conexão co nada de fora deles
+-Múltiplos containers podem rodar juntos, exemplo: um para PHP eoutro para Mysql
+-Imagem: é um projeto que será executado pelo container, todas as instruções estarão declaradas nela
+-Fluxo: programamos uma imagem e a executamos por meio de um container
+-docker run 'imagem': executar uma imagem em um container
+-docker ps ou docker container ls: exibe quais containers estão sendo executados no momento
+-docker ps -a: temos também todos os containers já executado e estão em execução na máquina 
+-docker run -it 'imagem': para ter acesso ao terminal da imagem
+
+-container x VM:
+    1-container é uma aplicação que serve para um determinado fim, não possui sistema operacional, seu tamanho é de alguns MBs. Containers acabam gastando menos recursos para serem executados, por causa do seu uso específico
+
+    2-VM possui sistema operacional próprio, tamanho de gbs, pode executar diversas funções ao mesmo tempo. VMs gastam mais recursos, porém podem execer mais funções
+
+-docker run -d 'imagem': para rodar a imagem em background
+-docker stop 'id ou name do container': para parar o container
+-docker run -p 'port' 'imagem': para expor portas
+-docker start 'id ou name da imagem': para voltar o container parado
+
+-docker run x docker run:
+    1-docker run sempre cria um novo container
+
+    2-docker start aproveita  um container antigo
+
+-docker run --name 'novo_nome' 'imagem': para renomear o container
+-docker logs 'id ou name da imagem': para ver o log do container
+-docker rm 'id ou name da imagem': ppara remover o container
