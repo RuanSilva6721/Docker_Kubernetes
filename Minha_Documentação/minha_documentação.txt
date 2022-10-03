@@ -40,3 +40,14 @@
 -docker run --name 'novo_nome' 'imagem': para renomear o container
 -docker logs 'id ou name da imagem': para ver o log do container
 -docker rm 'id ou name da imagem': ppara remover o container
+
+*Imagem
+-dicas para escolher imagem: buscar imagens oficiais, ver quantidade de downloads e a quantidade de stars
+    1.Dockerfile
+    2.from: imagem base
+    3.workdir: diretório da aplicação
+    4.expose: porta da aplicação
+    5.copy: quais arquivos precisam ser copiados
+-docker build 'diretório da imagem': para fazer o build da imagem
+-docker image ls: listar as imagens 
+
