@@ -50,4 +50,12 @@
     5.copy: quais arquivos precisam ser copiados
 -docker build 'diretório da imagem': para fazer o build da imagem
 -docker image ls: listar as imagens 
+-leyers: são as camadas
+-docker pull 'imagem': para baixar a imagem do repo do docker, vai ficar guarda no pc  
+-docker run --help: podemos ver todas as opções disponiveis nos comandos
 
+observação: um ou mais container podem usar as mesma inagem
+
+-docker tag 'id da imagem' 'name da imagem': (adicionar nome para imagem)
+-docker tag 'id da imagem' 'name da imagem':'nome da tag'(adicionar nome e nome da tag para imagem)
+-docker build -t 'name da imagem' . : para criar a imagem com um nome
