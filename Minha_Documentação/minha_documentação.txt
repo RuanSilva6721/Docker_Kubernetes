@@ -59,3 +59,30 @@ observação: um ou mais container podem usar as mesma inagem
 -docker tag 'id da imagem' 'name da imagem': (adicionar nome para imagem)
 -docker tag 'id da imagem' 'name da imagem':'nome da tag'(adicionar nome e nome da tag para imagem)
 -docker build -t 'name da imagem' . : para criar a imagem com um nome
+
+
+
+
+
+
+
+
+
+
+*CI/CD
+-CI(integração contínua): garantir que ao integar o código com o código de outros devs estaja dentro dos padrões de qualidade definido pelo empresa
+-CD(entrega contínua): coloca o código testado em  um servidor de forma contínua
+
+
+*jenkins, Sonarqube, Artifactory
+
+-jenkins: é um servidor de automação independente e de código aberto. È usado para o build da aplicação
+    1-altamente configurável
+    2-A comunidade adicional desenvolveu plugins fornecem ainda mais flexibilidade
+    3-configurar: associar a um servidor de contrle de versão
+
+-Sonarqube: é uma plataforma de software livre usada por equipes de desenvolvimento para gerenciar a qualidade de código-fonte
+    1-geração de relatórios: código duplicado, padrões de codificação, testes unitários, complexidade de código, erros pontencias, comentários, design e arquitetura
+    2-inspeção contínua
+
+-Artifactory: o JFrog Artifactory é um gerenciador universal de artefatos binários usado na integração contínua(CI) fluxo de trabalho de entrega contínua(CD) no processo de DevOps
