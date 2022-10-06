@@ -59,9 +59,10 @@ observação: um ou mais container podem usar as mesma inagem
 -docker tag 'id da imagem' 'name da imagem': (adicionar nome para imagem)
 -docker tag 'id da imagem' 'name da imagem':'nome da tag'(adicionar nome e nome da tag para imagem)
 -docker build -t 'name da imagem' . : para criar a imagem com um nome
-
-
-
+-docker rmi 'imagem': para remover a imagem
+-docker rmi -f 'imagem': para forçar a remoção da imagem
+-docker system prune: podemos remover imagens, containers e networks
+-docker rub --rm 'container': um container pode ser automaticamente deletado após sua utilização
 
 
 
