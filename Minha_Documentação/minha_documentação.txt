@@ -62,11 +62,16 @@ observação: um ou mais container podem usar as mesma inagem
 -docker rmi 'imagem': para remover a imagem
 -docker rmi -f 'imagem': para forçar a remoção da imagem
 -docker system prune: podemos remover imagens, containers e networks
--docker rub --rm 'container': um container pode ser automaticamente deletado após sua utilização
-
-
-
-
+-docker run --rm 'container': um container pode ser automaticamente deletado após sua utilização
+-docker cp 'imagem' : para copiar arquivos entre containers
+-docker top 'conatiner': para verificar dados de execução de um container 
+-docker inspect 'container': entender como o container está configurado
+-docker stats : para verificar os processos que estão sendo execitados em um container
+-docker login: para fazer o login com repo do docker
+-docker logout: para remover as credenciais
+-docker push 'imagem': mandar a imagem para o repo do docker
+-docker pull 'imagem': puxar a imagem do o repo do docker
+-docker rmi 'imagem': remover a imagem do o repo do docker
 
 
 
