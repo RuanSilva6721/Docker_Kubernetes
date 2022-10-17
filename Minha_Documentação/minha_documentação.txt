@@ -74,6 +74,22 @@ observação: um ou mais container podem usar as mesma inagem
 -docker rmi 'imagem': remover a imagem do o repo do docker
 
 
+*Volume
+Uma forma prática de persistir dados em aplicações e não depender de containers para isso
+
+
+-Anônimos(anonymous): Diretórios criados pela flag "-v", porém com um nome aleatório
+-Nomeados(named): São volumes com nomes, podemos nos referir a estes facilmente e saber para que são ultilizados no nosso ambiente
+-Bind mounts: Uma forma de salvar dados na nossa máquina, sem o gerenciamento do Docker, informamos um diretório para este fim
+
+-docker run -v  /'diretótio': criar um volume anônimo
+-docker volume ls: para ver os volumes
+docker run -v  nomedovolume://'diretótio': criar um volume nomeado. ex: sudo docker run -d -p 80:80 --name phpmessages_container5 -v nomedovolume:/var/www/html/messages --rm  phpmessages2
+
+
+
+
+
 
 *CI/CD
 -CI(integração contínua): garantir que ao integar o código com o código de outros devs estaja dentro dos padrões de qualidade definido pelo empresa
