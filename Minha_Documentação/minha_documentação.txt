@@ -84,9 +84,12 @@ Uma forma prática de persistir dados em aplicações e não depender de contain
 
 -docker run -v  /'diretótio': criar um volume anônimo
 -docker volume ls: para ver os volumes
-docker run -v  nomedovolume://'diretótio': criar um volume nomeado. ex: sudo docker run -d -p 80:80 --name phpmessages_container5 -v nomedovolume:/var/www/html/messages --rm  phpmessages2
-
-
+-docker run -v  nomedovolume://'diretótio': criar um volume nomeado. ex: sudo docker run -d -p 80:80 --name phpmessages_container5 -v nomedovolume:/var/www/html/messages --rm  phpmessages2
+-docker run -v caminho ate o a pasta://'diretótio': para criar bind mounts, salva o volume na nossa máquina
+-docker volume create 'nome do volume': para criar voluems manualmente
+-docker volume inspect 'nome do volume': para inspecionar o volume
+-docker volume rm 'nome do volume': para remover o volume
+-docker volume prune: remover todos os volumes não ultilizados
 
 
 
