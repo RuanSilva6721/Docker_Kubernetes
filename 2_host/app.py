@@ -14,7 +14,7 @@ app.config['MYSQL_HOST'] = 'host.docker.internal'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = ''
 app.config['MYSQL_DB'] = 'flaskhost'
-
+mysql = MySQL(app)
 
 @app.route("/", methods=["GET"])
 def index():
@@ -23,11 +23,11 @@ def index():
 
 @app.route("/inserthost", methods=['POST'])
 def inserthost():
-  data = request('https://randomuser.me/api').jason()
+  data = requests.get('https://randomuser.me/api').json()
   username = data['results'][0]['name']['first']
   
   cur = mysql.connection.cursor()
-  cur = execute("""INSERT INTO users(name) VALUES (%s)""", (username,))
+  cur.execute("""INSERT INTO users(name) VALUES (%s)""", (username,))
   mysql.connection.commit()
   cur.close()
   return username
