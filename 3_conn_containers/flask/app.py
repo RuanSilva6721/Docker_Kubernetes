@@ -5,15 +5,14 @@ import requests
 import flask_mysqldb
 from flask_mysqldb import MySQL
 
-
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
-
 
 app.config['MYSQL_HOST'] = 'mysql_api_container'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = ''
 app.config['MYSQL_DB'] = 'flaskdocker'
+
 mysql = MySQL(app)
 
 @app.route("/", methods=["GET"])
@@ -25,11 +24,12 @@ def index():
 def inserthost():
   data = requests.get('https://randomuser.me/api').json()
   username = data['results'][0]['name']['first']
-  
+
   cur = mysql.connection.cursor()
-  cur.execute("""INSERT INTO users(name) VALUES (%s)""", (username,))
+  cur.execute("""INSERT INTO users(name) VALUES(%s)""", (username,))
   mysql.connection.commit()
   cur.close()
+
   return username
 
 if __name__ == "__main__":
