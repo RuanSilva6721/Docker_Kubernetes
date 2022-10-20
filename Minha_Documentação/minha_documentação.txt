@@ -108,7 +108,17 @@ Uma forma de gerenciar a conexão do Docker com outras plataformas ou até mesmp
 -docker network create -d 'tipo do drive' 'nome da rede': para criar uma rede com um drieve específico
 -docker network rm 'nome da rede'
 -docker network prune: para remover todas as redes não ultilizadas
--docker logs 'nome da rede': para ver o log da rede
+-docker network logs 'nome da rede': para ver o log da rede
+-docker network connect 'nome da rede' 'id do container': conectar um container a uma rede
+-docker network disconnect 'nome da rede' 'id do container': desconectar um container a uma rede
+-docker network inspect 'nome da rede': detalhes de uma rede
+
+*YAML
+
+
+
+
+
 
 
 *CI/CD

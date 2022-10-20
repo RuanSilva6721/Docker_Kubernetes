@@ -1,0 +1,10 @@
+nome: "Ruan"
+idade: 21
+
+objeto:
+  versao: 2
+  arquivo: "teste.txt"
+
+#cometário
+#array[]
+#obj:{a:1, b:2}
